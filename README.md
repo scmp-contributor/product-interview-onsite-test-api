@@ -19,7 +19,7 @@
 * `q` as `investor`
 * `t` as `Hong Kong,Asia`
 
-`http://localhost:3001/?q=investor&t=Hong%20Kong,Asia`
+`http://localhost:3001/search?q=investor&t=Hong%20Kong,Asia`
 
 #### Response
 ```
