@@ -8,10 +8,10 @@
 ## API
 ### GET /search
 
-| Argument  | Query string | Description                            | Example    |
-|-----------|--------------|----------------------------------------| ---------- |
-| Text      | `q`          | The text to search.                     | `china`    |
-| Topics    | `t`          | The topics to search, delimited by `,` | `Hong Kong,Asia`          |
+| Argument  | Query string | Description                             | Example          |
+|-----------|--------------|-----------------------------------------| ---------------- |
+| Text      | `q`          | The text to search.                     | `china`          |
+| Topics    | `t`          | The topics to search, delimited by `,`  | `Hong Kong,Asia` |
 
 #### Sample query
 #### Search text with `investor` and topics with `Hong Kong` and `Asia`
