@@ -1,9 +1,11 @@
 # Product on-site test mockup api
 
-### How to start
+## How to start
 1. Git clone this repository.
 2. Run `npm start`.
+3. Run api server at `localhost:3001`, port is 3001 by default, it is able to be changed by environment variable `PORT` .
 
+## API
 ### GET /search
 
 | Argument  | Query string | Description                            | Example    |
@@ -13,6 +15,9 @@
 
 #### Sample query
 #### Search text with `investor` and topics with `Hong Kong` and `Asia`
+
+* `q` as `investor`
+* `t` as `Hong Kong,Asia`
 
 `http://localhost:3001/?q=investor&t=Hong%20Kong,Asia`
 
