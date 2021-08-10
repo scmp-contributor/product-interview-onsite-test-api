@@ -1,9 +1,12 @@
 import data from './data.js'
 import express from 'express'
+import cors from 'cors'
 import search from './search.js'
 import path from 'path'
 const app = express()
 const port = process.env.PORT || 3001
+
+app.use(cors())
 
 // Endpoint for search query.
 app.get('/search', (req, res) => {
@@ -15,7 +18,6 @@ app.get('/search', (req, res) => {
     const q = req.query.q || ''
     const t = req.query.t || ''
     const fileSystemHost = `${req.secure ? 'https://' : 'http://'}${req.headers.host}`
-    res.set('Access-Control-Allow-Origin', '*')
     res.json(search(q, t, fileSystemHost))
   }
 })
@@ -23,7 +25,6 @@ app.get('/search', (req, res) => {
 // Endpoint for topics listing.
 app.get('/topics', (req, res) => {
   const topicResult = data.topics
-  res.set('Access-Control-Allow-Origin', '*')
   res.json(topicResult)
 })
 
